@@ -2,6 +2,7 @@ fastapi
 uvicorn
 rich
 langchain
+langchain_huggingface
 langchain_groq
 langchain_core
 langchain_community
