@@ -8,8 +8,8 @@ from langchain_groq import ChatGroq
 from langchain_community.vectorstores import Chroma
 from langchain_community.document_loaders import PyPDFLoader
 from langchain.text_splitter import RecursiveCharacterTextSplitter
-from langchain_community.embeddings import HuggingFaceBgeEmbeddings
-#from langchain_huggingface import HuggingFaceEmbeddings
+#from langchain_community.embeddings import HuggingFaceBgeEmbeddings
+from langchain_huggingface import HuggingFaceEmbeddings
 
 def initialize_llm():
     return ChatGroq(
@@ -21,7 +21,7 @@ def initialize_llm():
 
 def create_or_load_vector_db(pdf_path, db_path):
     # Use a real huggingface model that works with sentence embeddings
-    embeddings = HuggingFaceBgeEmbeddings(model_name='sentence-transformers/all-MiniLM-L6-v2')
+    embeddings = HuggingFaceEmbeddings(model_name='sentence-transformers/all-MiniLM-L6-v2')
     
     if not os.path.exists(db_path):
         loader = PyPDFLoader(pdf_path)
