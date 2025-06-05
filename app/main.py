@@ -1,10 +1,10 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
-from sample_questions import SAMPLE_QUESTIONS
-from utils import load_therapists
-from llm_setup import initialize_llm, create_or_load_vector_db
-from qa_chain import setup_qa_chain
+from app.sample_questions import SAMPLE_QUESTIONS
+from app.utils import load_therapists
+from app.llm_setup import initialize_llm, create_or_load_vector_db
+from app.qa_chain import setup_qa_chain
 
 # File paths
 CSV_PATH = "app/updated_mental_health_professionals.csv"
