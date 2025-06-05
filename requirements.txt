@@ -1,0 +1,14 @@
+fastapi
+uvicorn
+rich
+langchain
+langchain_groq
+langchain_core
+langchain_community
+ChromaDB
+sentence_transformers
+pypdf
+gradio==5.0.1
+pydantic==2.10.6
+flask
+flask_cors
