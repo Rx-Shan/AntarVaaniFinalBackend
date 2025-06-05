@@ -8,7 +8,7 @@ from langchain.embeddings import HuggingFaceBgeEmbeddings
 def initialize_llm():
     return ChatGroq(
         temperature=0,
-        groq_api_key="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",
+        groq_api_key=os.getenv("GROQ_API_KEY"),
         model_name="llama-3.3-70b-versatile"  # or any other model supported
     )
 #alternative "llama3-70b-8192" if above doesnot work
