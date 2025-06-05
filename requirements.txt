@@ -8,7 +8,6 @@ langchain_community
 ChromaDB
 sentence_transformers
 pypdf
-gradio==5.0.1
 pydantic==2.10.6
-flask
-flask_cors
+# flask
+# flask_cors
