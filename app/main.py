@@ -86,4 +86,4 @@ def chat_with_bot(data: ChatRequest):
 
 if __name__ == "__main__":
     port = int(os.getenv("PORT", 8000))  # use env PORT or default 8000
-    uvicorn.run("app.main:app", host="0.0.0.0", port=8080)
+    uvicorn.run("app.main:app", host="0.0.0.0", port=port)  # <-- use the variable here!
