@@ -5,6 +5,8 @@ from app.sample_questions import SAMPLE_QUESTIONS
 from app.utils import load_therapists
 from app.llm_setup import initialize_llm, create_or_load_vector_db
 from app.qa_chain import setup_qa_chain
+import os
+import uvicorn
 
 # File paths
 CSV_PATH = "app/updated_mental_health_professionals.csv"
@@ -81,3 +83,7 @@ def chat_with_bot(data: ChatRequest):
     response = qa_chain.run(data.user_input)
     history.append(["AntarVaani", response])
     return {"chat_history": history}
+
+if __name__ == "__main__":
+    port = int(os.getenv("PORT", 8000))  # use env PORT or default 8000
+    uvicorn.run("app.main:app", host="0.0.0.0", port=port)
