@@ -30,7 +30,7 @@ app = FastAPI()
 # Allow frontend calls
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],  # replace with frontend URL in production
+    allow_origins=["https://antar-vaani-final-frontend.vercel.app"],  # replace with frontend URL in production
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
